@@ -1,10 +1,12 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
+import Header from '../components/header.astro';
+import "../styles/global.css";
+
 ---
 
 <Layout>
-	<Welcome />
 	<Header />
+	<Welcome />
 </Layout>
