@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<style>
+.steam-photo-block {
+  position: relative;
+  width: 224px;
+  height: 224px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.steam-photo-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  border: 4px solid #23272f;
+  background: #111827;
+  box-shadow: 0 0 24px 0 #23272f, 0 0 20px rgba(0,212,255,0.08);
+}
+.steam-photo-block::before,
+.steam-photo-block::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #0ea5e9, #6366f1, #a21caf, #0ea5e9, #6366f1, #a21caf);
+  background-size: 300%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: 0;
+  animation: steam 16s linear infinite;
+  border-radius: 10px;
+  transition: filter 0.3s;
+  opacity: 0.85;
+}
+.steam-photo-block::after {
+  filter: blur(32px);
+  opacity: 0.5;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+</style>
+
+<Layout>
+  <section class="py-16 sm:py-24 bg-transparent">
+    <div class="max-w-3xl mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-8">
+      <div class="steam-photo-block flex-shrink-0">
+        <img 
+          src="/photo.webp" 
+          alt="Foto de perfil"
+          width="224"
+          height="224"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <h1 class="text-4xl font-extrabold text-[#E0E0E0] mb-6 text-center md:text-left">Acerca de mí</h1>
+        <p class="text-lg text-gray-300 mb-4 text-center md:text-left">
+          Hola! Soy un desarrollador y apasionado por la tecnología, creador de soluciones digitales. Me enfocado en el desarrollo frontend y me gustar aprender herramientas y lenguajes nuevos.
+        </p>
+        <p class="text-lg text-gray-300 mb-4 text-center md:text-left">
+          Tengo experiencia en HTML, CSS, JavaScript, TypeScript, Angular, Astro, TailwindCSS. Soy una persona proactiva, creativa y con adaptación a nuevos retos.
+        </p>
+        <p class="text-lg text-gray-300 text-center md:text-left">
+          Mi meta es mi desarrollo como profesional, aporte a mis proyectos y trabajar en equipos multidisciplinarios obteniendo grandes resultados.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
