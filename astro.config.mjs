@@ -3,9 +3,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://cj-montero.github.io',
-  base: '/',
+  base: 'cj-montero.github.io',
   vite: {
     plugins: [tailwindcss()]
   }
 });
-
