@@ -3,13 +3,15 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
-const LIVE_URL = 'https://CJ-Montero.github.io';
 
-// https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
+  build: {
+    assetsPrefix: './',
   },
-  site: 'https://CJ-Montero.github.io',
-  base: '/cj-montero.github.io',
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  base: '/',
+  site: 'https://cj-montero.github.io',
+  trailingSlash: 'never', // opcional
 });
