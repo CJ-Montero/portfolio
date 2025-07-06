@@ -11,6 +11,7 @@
     "deploy": "npm run build && npm run postbuild && gh-pages -d dist"
   },
   "dependencies": {
+    "@astrojs/netlify": "^6.4.1",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.10.1",
     "gh-pages": "^6.3.0"
