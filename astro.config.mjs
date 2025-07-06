@@ -11,5 +11,5 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
   site: 'https://CJ-Montero.github.io',
-  base: '/',
+  base: '/cj-montero.github.io',
 });
