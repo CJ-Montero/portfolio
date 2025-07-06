@@ -21,32 +21,33 @@ const projects = [
 ---
 
 <Layout>
-  <section class="max-w-5xl mx-auto px-4 py-16">
-    <h1 class="text-4xl font-extrabold text-[#E0E0E0] mb-10 text-center">Proyectos</h1>
-    <div class="grid gap-8 md:grid-cols-2">
-      {projects.map(project => (
-        <div class="bg-white/10 border border-white/20 rounded-2xl shadow-lg p-6 flex flex-col justify-between backdrop-blur-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:ring-2 hover:ring-white/30 hover:brightness-110">
-          <div>
-            <h2 class="text-2xl font-bold text-[#E0E0E0] mb-2">{project.name}</h2>
-            <p class="text-[#B0B0B0] mb-4 text-left">{project.description}</p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              {project.stack.map(tech => (
-                <span class="px-3 py-1 rounded-full bg-[#444444]/60 text-[#E0E0E0] text-sm font-semibold">{tech}</span>
-              ))}
-            </div>
-          </div>
-          <div class="flex gap-4 mt-2">
-            <a href={project.url} target="_blank" rel="noopener" class="inline-block px-5 py-2 rounded-full bg-[#0A66C2]/90 text-white font-semibold shadow hover:bg-[#0A66C2] transition-all duration-200">
-              GitHub
-            </a>
-            {project.demo && (
-              <a href={project.demo} target="_blank" rel="noopener" class="inline-block px-5 py-2 rounded-full bg-white/10 text-[#E0E0E0] font-semibold shadow hover:bg-white/20 hover:text-[#222] transition-all duration-200">
-                Demo
-              </a>
-            )}
+  <section class="max-w-5xl mx-auto px-4 py-8 md:py-16">
+  <h1 class="text-3xl md:text-4xl font-extrabold text-[#E0E0E0] mb-10 text-center">Proyectos</h1>
+  <div class="grid gap-8 md:grid-cols-2">
+    {projects.map(project => (
+      <div class="bg-white/10 border border-white/20 rounded-2xl shadow-lg p-4 md:p-6 flex flex-col justify-between backdrop-blur-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:ring-2 hover:ring-white/30 hover:brightness-110">
+        <div>
+          <h2 class="text-xl md:text-2xl font-bold text-[#E0E0E0] mb-2">{project.name}</h2>
+          <p class="text-base text-[#B0B0B0] mb-4 text-left">{project.description}</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            {project.stack.map(tech => (
+              <span class="px-3 py-1 rounded-full bg-[#444444]/60 text-[#E0E0E0] text-sm font-semibold">{tech}</span>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
+        <div class="flex gap-4 mt-2">
+          <a href={project.url} target="_blank" rel="noopener" class="inline-block px-5 py-3 rounded-full bg-[#0A66C2]/90 text-white font-semibold shadow hover:bg-[#0A66C2] transition-all duration-200">
+            GitHub
+          </a>
+          {project.demo && (
+            <a href={project.demo} target="_blank" rel="noopener" class="inline-block px-5 py-3 rounded-full bg-white/10 text-[#E0E0E0] font-semibold shadow hover:bg-white/20 hover:text-[#222] transition-all duration-200">
+              Demo
+            </a>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
   </section>
 </Layout>
