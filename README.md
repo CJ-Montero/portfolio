@@ -1,48 +1,64 @@
-# Astro Starter Kit: Basics
+# Portafolio Personal de CJ Montero
 
-```sh
-npm create astro@latest -- --template basics
+Este repositorio contiene el código fuente del portafolio personal de CJ Montero, desarrollado con [Astro](https://astro.build/), un moderno framework para sitios web rápidos y optimizados. El sitio está diseñado para presentar información profesional, proyectos destacados y enlaces de contacto.
+
+## 🚀 Tecnologías Utilizadas
+
+- **Astro**: Framework para sitios web estáticos y rápidos.
+- **TypeScript**: Tipado estático para JavaScript.
+- **Netlify**: Plataforma de despliegue continuo.
+- **HTML/CSS**: Estructura y estilos personalizados.
+- **VS Code**: Configuración del entorno de desarrollo.
+
+## 📁 Estructura del Proyecto
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
-│   └── favicon.svg
+├── public/                # Archivos estáticos (favicon, imágenes, etc.)
 ├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── layouts/           # Plantillas base (Layout.astro)
+│   └── pages/             # Páginas del sitio (index.astro, about.astro, etc.)
+├── .vscode/               # Configuraciones del editor
+├── astro.config.mjs       # Configuración de Astro
+├── netlify.toml           # Configuración de despliegue en Netlify
+├── package.json           # Dependencias y scripts del proyecto
+├── tsconfig.json          # Configuración de TypeScript
+└── README.md              # Documentación del proyecto
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Instalación y Desarrollo Local
 
-## 🧞 Commands
+1. **Clonar el repositorio:**
 
-All commands are run from the root of the project, from a terminal:
+   ```bash
+   git clone https://github.com/CJ-Montero/portfolio.git
+   cd portfolio
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+2. **Instalar dependencias:**
 
-## 👀 Want to learn more?
+   ```bash
+   npm install
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. **Iniciar el servidor de desarrollo:**
+
+   ```bash
+   npm run dev
+   ```
+
+   El sitio estará disponible en `http://localhost:4321`.
+
+## 🌐 Despliegue
+
+Este proyecto está configurado para desplegarse automáticamente en [Netlify](https://www.netlify.com/) mediante el archivo `netlify.toml`. Para realizar un despliegue manual:
+
+1. Crear una cuenta en Netlify y conectar el repositorio.
+2. Configurar los comandos de construcción y la carpeta de salida:
+   - **Comando de construcción:** `npm run build`
+   - **Carpeta de salida:** `dist/`
+3. Iniciar el despliegue.
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
